@@ -1,0 +1,46 @@
+.container-daftar {
+  height: 80vh;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.397);
+  position: relative;
+  .back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(0, 195, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+  }
+  .daftar,
+  .max {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(0, 195, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+    cursor: pointer;
+  }
+  .max {
+    cursor: no-drop;
+    background-color: grey;
+  }
+  hr {
+    height: 2px;
+    width: 100%;
+    margin: 10px;
+    border: none;
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0),
+      black,
+      rgba(0, 0, 0, 0)
+    );
+  }
+}

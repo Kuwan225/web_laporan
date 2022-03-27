@@ -1,0 +1,48 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: rgb(0, 195, 255);
+  position: relative;
+  .App {
+    .wm {
+      position: absolute;
+      left: 10px;
+      h1 {
+        font-size: 35px;
+        color: #ffbb00;
+        text-shadow: 1px 1px 3px rgba(128, 128, 128, 0.5);
+      }
+    }
+  }
+  .container-app {
+    padding: 70px;
+    position: relative;
+    z-index: 1;
+  }
+  .image-app {
+    position: absolute;
+    bottom: 0;
+    height: 650px;
+    margin-left: -500px;
+  }
+}
+
+// ANIMATION
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    // transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    // transform: translateY(0);
+  }
+}

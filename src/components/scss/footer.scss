@@ -1,0 +1,21 @@
+.footer {
+  width: 100vw;
+  background-color: black;
+  color: rgb(122, 122, 122);
+  height: 50px;
+  margin-top: -10px;
+  margin-bottom: -30px;
+  text-align: center;
+  line-height: 50px;
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .link {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+      gap: 2px;
+    }
+  }
+}

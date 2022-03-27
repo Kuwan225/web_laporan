@@ -1,0 +1,76 @@
+.container-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.116);
+  z-index: 9999;
+  padding: 70px;
+  animation: slideTop 0.2s;
+  .content-form {
+    background-color: white;
+    height: 100%;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 10px;
+    position: relative;
+    .back {
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .title {
+      text-align: center;
+      padding: 20px;
+      h1 {
+        margin-top: 10px;
+        font-size: 45px;
+      }
+      hr {
+        margin: 10px;
+      }
+    }
+    .input-form {
+      padding: 0 40px;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      .left,
+      .right {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        label {
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+      }
+      .right {
+        textarea {
+          width: 100%;
+          padding: 10px;
+          outline: none;
+        }
+      }
+    }
+    .button {
+      position: absolute;
+      right: 153px;
+      height: 40px;
+      width: 100px;
+      bottom: 70px;
+    }
+    .warning {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

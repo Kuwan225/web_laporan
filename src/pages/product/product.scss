@@ -1,0 +1,26 @@
+.container-product {
+  background-color: white;
+  height: 80vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.301);
+  animation: slideTop 1s;
+
+  .content-product {
+    padding: 30px;
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      color: rgb(0, 195, 255);
+    }
+    hr {
+      box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.301);
+      border: 1px solid grey;
+      margin-top: 10px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
