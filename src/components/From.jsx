@@ -5,15 +5,18 @@ import Input from "./Input";
 import "./scss/form.scss";
 import { useForm } from "react-hook-form";
 import { getDatabase, ref, push, update } from "firebase/database";
+import notif from "./notif";
 
-const From = ({ setForm, produk, id }) => {
+const From = ({ setForm, produk, id, kg, harga }) => {
   const Navigate = useNavigate();
   const db = getDatabase();
   const { handleSubmit, register } = useForm();
+  const totalHarga = harga * kg;
 
   const onSubmit = (data) => {
     push(ref(db, `pembeli`), {
       namaProduk: produk,
+      harga: totalHarga,
       idProduk: id,
       namalengkap: data.namalengkap,
       nohp: data.nohp,
@@ -26,6 +29,7 @@ const From = ({ setForm, produk, id }) => {
         update(ref(db, `produk/${id}`), {
           diPesan: true,
         });
+        notif.succes("Silahkan tunggu 1 x 24jam setelah dipesan");
       })
       .catch((error) => {
         console.log(error);
@@ -54,6 +58,7 @@ const From = ({ setForm, produk, id }) => {
           <div className="input-form">
             <div className="left">
               <label htmlFor="">Nama lengkap:</label>
+
               <Input
                 place="Masukan Nama Kamu"
                 name="namalengkap"
@@ -93,17 +98,19 @@ const From = ({ setForm, produk, id }) => {
               ></textarea>
             </div>
           </div>
-          <div className="button">
-            <Button label="Kirim" />
+          <div className="bottom">
+            <div className="button">
+              <Button label="Kirim" />
+            </div>
+            <div className="warning">
+              <h3>Peringatan!</h3>
+              <p>
+                Mengklik Kirim Sama Dengan Kamu Sudah Memesan Dan Pesanan Kamu
+                Tidak Bisa Di Batalkan
+              </p>
+            </div>
           </div>
         </form>
-        <div className="warning">
-          <h3>Peringatan!</h3>
-          <p>
-            Mengklik Kirim Sama Dengan Kamu Sudah Memesan Dan Pesanan Kamu Tidak
-            Bisa Di Batalkan
-          </p>
-        </div>
       </div>
     </div>
   );

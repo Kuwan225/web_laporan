@@ -4,6 +4,7 @@ import Button from "../../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { getDatabase, ref, push } from "firebase/database";
 import { useForm } from "react-hook-form";
+import notif from "../../../components/notif";
 
 const Addproduk = () => {
   const { handleSubmit, register } = useForm();
@@ -28,6 +29,7 @@ const Addproduk = () => {
       setTimeout(() => {
         Navigate("/admin/daftar_produk");
         setLoading(false);
+        notif.succes("Produk berhasil di tambahkan");
       }, 2000);
     });
   };

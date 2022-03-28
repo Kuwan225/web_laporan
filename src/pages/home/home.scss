@@ -5,7 +5,6 @@
   overflow: hidden;
   box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.301);
   animation: slideTop 1s;
-
   .container-home {
     display: flex;
     align-items: center;
@@ -30,6 +29,44 @@
     .home-button {
       width: 120px;
       height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: "560px") {
+  .home {
+    height: 100%;
+    border-radius: 0;
+    .container-home {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column-reverse;
+      padding-top: 30px;
+      .content-image {
+        margin-top: 80px;
+        img {
+          width: 280px;
+        }
+      }
+      .content-caption {
+        width: 100%;
+        margin-top: 60px;
+        padding: 10px;
+        h1 {
+          font-size: 35px;
+          color: rgb(0, 195, 255);
+          margin-top: -30px;
+        }
+        p {
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+      }
+      .home-button {
+        width: 120px;
+        height: 40px;
+      }
     }
   }
 }

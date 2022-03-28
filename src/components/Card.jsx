@@ -6,10 +6,13 @@ import From from "./From";
 const Card = ({ gambar, nama, harga, id, promo, hargaPromo }) => {
   const [hideButton, setHideButton] = useState(false);
   const [form, setForm] = useState(false);
+  const [kg, setKg] = useState(1);
 
   return (
     <>
-      {form && <From setForm={setForm} produk={nama} id={id} />}
+      {form && (
+        <From setForm={setForm} produk={nama} id={id} kg={kg} harga={harga} />
+      )}
       <div
         className="container-card"
         onMouseOver={() => setHideButton(true)}
@@ -33,7 +36,25 @@ const Card = ({ gambar, nama, harga, id, promo, hargaPromo }) => {
               </p>
             </>
           ) : (
-            <Button label={"Beli sekarang"} click={() => setForm(true)} />
+            <>
+              <div className="berapa-kg">
+                <span
+                  className="minus"
+                  onClick={() => {
+                    if (kg > 1) {
+                      setKg(kg - 1);
+                    }
+                  }}
+                >
+                  -
+                </span>
+                <span>{kg} Kg</span>
+                <span className="plus" onClick={() => setKg(kg + 1)}>
+                  +
+                </span>
+              </div>
+              <Button label={"Beli sekarang"} click={() => setForm(true)} />
+            </>
           )}
         </div>
       </div>

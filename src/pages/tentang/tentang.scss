@@ -24,3 +24,37 @@
     }
   }
 }
+
+@media screen and(max-width:"560px") {
+  .tentang {
+    background-color: white;
+    border-radius: 0;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    .container-tentang,
+    .visi-misi {
+      width: 80%;
+      margin: auto;
+      text-align: justify;
+      border: 2px solid grey;
+
+      padding: 10px;
+      margin-top: 100px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.4);
+      h1 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: rgb(0, 195, 255);
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .visi-misi {
+      margin-top: 30px;
+    }
+  }
+}

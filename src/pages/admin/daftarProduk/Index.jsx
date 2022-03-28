@@ -25,7 +25,7 @@ const DaftarProduk = () => {
   }, []);
 
   const tambahProduk = () => {
-    if (data.length < 5) {
+    if (data.length < 10) {
       Navigate("/admin/add_produk");
     }
   };
@@ -42,19 +42,29 @@ const DaftarProduk = () => {
         Tambah produk
       </p>
       <hr />
-      {data.map((el) => {
-        return (
-          <Tabel
-            key={el.id}
-            id={el.id}
-            no={el.no}
-            namaProduk={el.data.namaProduk}
-            harga={el.data.harga}
-            promo={el.data.promo}
-            hargaPromo={el.data.hargaPromo}
-          />
-        );
-      })}
+      <table>
+        <tr className="tr-th">
+          <th>No</th>
+          <th>Nama produk</th>
+          <th>Harga</th>
+          <th>Promo</th>
+          <th>Harga Promo</th>
+          <th>Pengaturan</th>
+        </tr>
+        {data.map((el) => {
+          return (
+            <Tabel
+              key={el.id}
+              id={el.id}
+              no={el.no}
+              namaProduk={el.data.namaProduk}
+              harga={el.data.harga}
+              promo={el.data.promo}
+              hargaPromo={el.data.hargaPromo}
+            />
+          );
+        })}
+      </table>
     </div>
   );
 };

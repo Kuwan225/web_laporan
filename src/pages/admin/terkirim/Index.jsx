@@ -1,5 +1,5 @@
 import "./terkirim.scss";
-import { getDatabase, ref, onValue } from "firebase/database";
+import { getDatabase, ref, onValue, remove } from "firebase/database";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -20,6 +20,10 @@ const Terkirim = () => {
       setData(data);
     });
   }, []);
+
+  const hapusHandler = (id) => {
+    remove(ref(db, `pembeli/${id}`));
+  };
   return (
     <div className="container-terkirim">
       <div className="content-admin">
@@ -36,6 +40,7 @@ const Terkirim = () => {
             <th>No hp</th>
             <th>Email</th>
             <th>Alamat</th>
+            <th>Pengaturan</th>
           </tr>
 
           {data.map((el) => {
@@ -48,6 +53,15 @@ const Terkirim = () => {
                   <td>{el.data.nohp}</td>
                   <td>{el.data.email}</td>
                   <td>{el.data.alamat}</td>
+                  <td>
+                    <button
+                      onClick={() => {
+                        hapusHandler(el.id);
+                      }}
+                    >
+                      Hapus
+                    </button>
+                  </td>
                 </tr>
               )
             );

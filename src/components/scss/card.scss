@@ -1,8 +1,8 @@
 .container-card {
   width: 200px;
   height: 310px;
+  margin-top: 10px;
   box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.424);
-  margin-top: 25px;
   position: relative;
   border-radius: 5px;
   border: 2px solid rgba(128, 128, 128, 0.041);
@@ -57,6 +57,25 @@
         text-decoration: line-through;
         opacity: 0.6;
         font-size: 13px;
+      }
+    }
+    .berapa-kg {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 10px;
+      .minus,
+      .plus {
+        background-color: #ffbb00;
+        color: white;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 15px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
       }
     }
   }

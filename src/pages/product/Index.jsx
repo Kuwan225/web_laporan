@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Card from "../../components/Card";
 import { getDatabase, ref, onValue } from "firebase/database";
-import img from "../../image/1.jpg";
 
 const Product = () => {
   const db = getDatabase();
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const endPoint = ref(db, `produk`);
     onValue(endPoint, (snapshot) => {

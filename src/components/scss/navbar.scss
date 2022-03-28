@@ -1,3 +1,6 @@
+.nav-mobile {
+  display: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -32,4 +35,74 @@ nav {
 .link {
   text-decoration: none;
   color: #ffbb00;
+}
+
+@media screen and (max-width: "560px") {
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    z-index: 90000000;
+    background-color: #000000;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    h1 {
+      color: #ffbb00;
+    }
+    .content {
+      position: relative;
+      .icon,
+      .iconBurger {
+        font-size: 40px;
+      }
+      .icon {
+        color: white;
+      }
+      input {
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  nav {
+    display: none;
+  }
+  .hide-nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    height: 100vh;
+    align-items: flex-start;
+    z-index: 9000000;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      margin-top: -20px;
+      li,
+      .aktif {
+        list-style: none;
+        padding: 3px 10px;
+        font-style: italic;
+        font-weight: 500;
+        border-radius: 30px;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+          background-color: #000000;
+          color: rgb(0, 195, 255);
+        }
+      }
+      .aktif {
+        color: rgb(0, 195, 255);
+        background-color: black;
+      }
+    }
+  }
 }

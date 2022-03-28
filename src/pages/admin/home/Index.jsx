@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./home.scss";
 import { getDatabase, ref, onValue, update } from "firebase/database";
 import { Link } from "react-router-dom";
+import notif from "../../../components/notif";
 
 const HomeAdmin = () => {
   const db = getDatabase();
@@ -23,6 +24,8 @@ const HomeAdmin = () => {
   const diKirimHandler = (id, produk) => {
     update(ref(db, `pembeli/${id}`), {
       diKirim: true,
+    }).then(() => {
+      notif.succes("Produk sedang di kirim");
     });
 
     update(ref(db, `produk/${produk}`), {
@@ -48,6 +51,7 @@ const HomeAdmin = () => {
           <tr>
             <th>No</th>
             <th>produk</th>
+            <th>Jumlah harga</th>
             <th>Nama pembeli</th>
             <th>No hp</th>
             <th>Email</th>
@@ -61,6 +65,7 @@ const HomeAdmin = () => {
                 <tr key={el.id}>
                   <td>{el.no}</td>
                   <td>{el.data.namaProduk}</td>
+                  <td>{el.data.harga}</td>
                   <td>{el.data.namalengkap}</td>
                   <td>{el.data.nohp}</td>
                   <td>{el.data.email}</td>

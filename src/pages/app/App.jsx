@@ -11,10 +11,13 @@ import HomeAdmin from "../admin/home/Index";
 import Addproduk from "../admin/addProduk/Index";
 import DaftarProduk from "../admin/daftarProduk/Index";
 import Terkirim from "../admin/terkirim/Index";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <div className="wm">
         <h1>Wan</h1>
       </div>
