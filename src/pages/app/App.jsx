@@ -18,9 +18,6 @@ function App() {
   return (
     <div className="App">
       <ToastContainer />
-      <div className="wm">
-        <h1>Wan</h1>
-      </div>
       <div className="container-app">
         <Routes>
           <Route path="/" element={<Home />} />

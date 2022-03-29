@@ -1,10 +1,9 @@
 .container-product {
   background-color: white;
-  height: 80vh;
+  height: 100vh;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.301);
   animation: slideTop 1s;
-
   .content-product {
     padding: 30px;
     h1 {
@@ -19,7 +18,7 @@
     }
     .cards {
       display: flex;
-      height: 350px;
+      height: 470px;
       flex-wrap: wrap;
       overflow-y: scroll;
       gap: 30px;

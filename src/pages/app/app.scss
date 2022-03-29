@@ -10,19 +10,7 @@ body {
   height: 100vh;
   background-color: rgb(0, 195, 255);
   position: relative;
-  .App {
-    .wm {
-      position: absolute;
-      left: 10px;
-      h1 {
-        font-size: 35px;
-        color: #ffbb00;
-        text-shadow: 1px 1px 3px rgba(128, 128, 128, 0.5);
-      }
-    }
-  }
   .container-app {
-    padding: 70px;
     position: relative;
     z-index: 1;
   }

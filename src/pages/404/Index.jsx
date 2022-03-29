@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const Error = () => {
   return (
     <div className="noHalaman">
-      <h1>404</h1>
-      <p>Belum Ada Halaman Hehe:)</p>
-      <div className="button">
-        <Link to="/">
-          <Button label="Kembali Ke Beranda" />
-        </Link>
+      <div className="content-halaman">
+        <div className="button">
+          <Link to="/">
+            <Button label="Kembali Ke Beranda" />
+          </Link>
+        </div>
       </div>
     </div>
   );
