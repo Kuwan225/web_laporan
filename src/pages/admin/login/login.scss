@@ -1,19 +1,19 @@
 .container-login {
-  width: 89vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   animation: slideTop 0.7s;
-
+  background-color: #ffbb00;
   .caption {
     h1 {
       font-size: 50px;
-      color: black;
+      color: white;
     }
     p {
       font-size: 18px;
-      font-weight: 500;
+      margin-left: 5px;
     }
   }
   .content-login {

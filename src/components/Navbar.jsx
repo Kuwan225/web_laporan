@@ -2,6 +2,7 @@ import "./scss/navbar.scss";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdMenu, MdClose } from "react-icons/md";
+import { BsShop } from "react-icons/bs";
 
 const Navbar = (props) => {
   const { active, activeTentang, activeProduct, activeLokasi } = props;
@@ -31,7 +32,13 @@ const Navbar = (props) => {
         </div>
       </div>
       <nav className={hideNav}>
-        <div className="logo">{/* <h1>Wan</h1> */}</div>
+        <div className="logo">
+          <h1>
+            <BsShop className="icon" />
+            Wan
+          </h1>
+          <hr />
+        </div>
         <ul>
           <Link to="/" className="link">
             <li className={active}>Beranda</li>

@@ -8,7 +8,8 @@
 body {
   overflow-x: hidden;
   height: 100vh;
-  background-color: rgb(0, 195, 255);
+  background-color: white;
+
   position: relative;
   .container-app {
     position: relative;
@@ -45,6 +46,7 @@ body {
     height: 100%;
     overflow: hidden;
     padding-bottom: 20px;
+    // background-image: url(../../image/wave.svg);
 
     .container-app {
       padding: 0px;

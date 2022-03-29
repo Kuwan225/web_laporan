@@ -7,11 +7,12 @@ import { useForm } from "react-hook-form";
 import { getDatabase, ref, push, update } from "firebase/database";
 import notif from "./notif";
 
-const From = ({ setForm, produk, id, kg, harga }) => {
+const From = ({ setForm, produk, id, kg, harga, stok }) => {
   const Navigate = useNavigate();
   const db = getDatabase();
   const { handleSubmit, register } = useForm();
   const totalHarga = harga * kg;
+  const totalStok = stok - kg;
 
   const onSubmit = (data) => {
     push(ref(db, `pembeli`), {
@@ -28,6 +29,7 @@ const From = ({ setForm, produk, id, kg, harga }) => {
         Navigate("/");
         update(ref(db, `produk/${id}`), {
           diPesan: true,
+          stok: totalStok,
         });
         notif.succes("Silahkan tunggu 1 x 24jam setelah dipesan");
       })

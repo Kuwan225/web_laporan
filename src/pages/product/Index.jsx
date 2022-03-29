@@ -39,6 +39,7 @@ const Product = () => {
                   id={el.id}
                   promo={el.data.promo}
                   harga={el.data.harga}
+                  stok={el.data.stok}
                 />
               );
             })}

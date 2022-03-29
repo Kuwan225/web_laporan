@@ -1,6 +1,5 @@
 import Home from "../home/Index";
 import "./app.scss";
-import bg from "../../image/wave.svg";
 import { Route, Routes } from "react-router-dom";
 import Tentang from "../tentang/Index";
 import Product from "../product/Index";
@@ -26,15 +25,15 @@ function App() {
           {/* ================ADMIN================= */}
           <Route path="admin/login" element={<Login />} />
           <Route path="admin" element={<HomeAdmin />} />
-          <Route path="admin/add_produk" element={<Addproduk />} />
+          <Route path="admin/tambah_produk" element={<Addproduk />} />
           <Route path="admin/daftar_produk" element={<DaftarProduk />} />
-          <Route path="admin/produk_terkirim" element={<Terkirim />} />
+          <Route path="admin/pesanan_terkirim" element={<Terkirim />} />
           {/* =================404================== */}
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
 
-      <img className="image-app" src={bg} alt="" />
+      {/* <img className="image-app" src={bg} alt="" /> */}
       <Footer />
     </div>
   );
