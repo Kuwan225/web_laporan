@@ -20,7 +20,7 @@ const Tentang = () => {
           <div className="visi-misi">
             <h1>Visi-Misi</h1>
             <p>
-              Menjual sayuran yang fresh,Kemudian berjualan dengan jujur dan
+              Menjual sayuran yang fresh, Kemudian berjualan dengan jujur dan
               teliti
             </p>
           </div>

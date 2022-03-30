@@ -3,7 +3,6 @@ import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import NavbarAdmin from "../../../components/NavbarAdmin";
 
 const Login = () => {
   const { handleSubmit, register } = useForm();
@@ -25,7 +24,6 @@ const Login = () => {
 
   return (
     <>
-      <NavbarAdmin />
       <div className="container-login">
         <div className="caption">
           <h1>Peringatan!</h1>

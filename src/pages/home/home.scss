@@ -2,16 +2,20 @@
   background-color: white;
   height: 100vh;
   overflow: hidden;
-  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.301);
   animation: slideTop 1s;
   .container-home {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    .content-image {
-      margin-top: 100px;
-      img {
-        width: 440px;
+    .content-promo {
+      .content-image {
+        margin-top: 100px;
+        img {
+          width: 440px;
+        }
+      }
+      .boxs {
+        display: none;
       }
     }
     .content-caption {
@@ -36,24 +40,66 @@
 
 @media screen and (max-width: "560px") {
   .home {
-    height: 100%;
-    border-radius: 0;
+    height: 100vh;
     .container-home {
       display: flex;
       align-items: center;
       justify-content: space-around;
       flex-direction: column-reverse;
-      padding-top: 30px;
+      padding: 0px;
       .content-image {
         margin-top: 80px;
         img {
-          width: 280px;
+          width: 100vw;
+        }
+      }
+      .content-promo {
+        position: relative;
+        .boxs {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          position: absolute;
+          bottom: -20px;
+          text-align: center;
+          .box {
+            width: 46%;
+            height: 100px;
+            background-color: rgba(128, 128, 128, 0.4);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            .promo {
+              background-color: #ffbb00;
+              width: 30%;
+              height: 40px;
+              line-height: 60px;
+              text-align: center;
+              transform: rotate(-45deg);
+              position: absolute;
+              left: -22px;
+              top: -12px;
+              p {
+                color: white;
+              }
+            }
+            h1 {
+              color: #ffbb00;
+              text-shadow: 2px 2px 2px grey;
+              margin-top: 10px;
+              font-size: 29px;
+            }
+            hr {
+              border: 1px solid rgb(83, 83, 83);
+            }
+          }
         }
       }
       .content-caption {
         width: 100%;
-        margin-top: 60px;
-        padding: 10px;
+        margin-top: 30px;
+        padding: 30px;
+
         h1 {
           font-size: 35px;
           color: rgb(0, 195, 255);

@@ -7,6 +7,7 @@ const Error = () => {
   return (
     <div className="noHalaman">
       <div className="content-halaman">
+        <div className="image"></div>
         <div className="button">
           <Link to="/">
             <Button label="Kembali Ke Beranda" />
